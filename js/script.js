@@ -261,7 +261,9 @@ $(function () {
 				pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
 				addClass: addClass,
 				mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
-				loop: $(itemsToInit).attr("data-lg-loop") !== "false"
+				loop: $(itemsToInit).attr("data-lg-loop") !== "false",
+				download:false,
+				share: false
 			});
 		}
 	}
@@ -283,7 +285,9 @@ $(function () {
 					mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
 					loop: $(itemsToInit).attr("data-lg-loop") !== "false",
 					dynamic: true,
-					dynamicEl: JSON.parse($(itemsToInit).attr("data-lg-dynamic-elements")) || []
+					dynamicEl: JSON.parse($(itemsToInit).attr("data-lg-dynamic-elements")) || [],
+					download: false,
+					share: false
 				});
 			});
 		}
